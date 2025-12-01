@@ -1,7 +1,7 @@
 class Solution {
 public:
-    int reverse(int x) {
-        int q=x,r=0;
+    long long reverse(long long x) {
+        long long q=x,r=0;
         if(INT_MIN <= x && x <= INT_MAX)
         {
             while(q!=0)
@@ -19,7 +19,10 @@ public:
             // {   
             //     x=r;
             // }
+            if(INT_MIN <= r && r <= INT_MAX)
             return r;
+            else
+            return 0;
         }
         else
         return 0;
