@@ -16,12 +16,10 @@ public:
                 else{
                     vector<int>temp = {nums[i], nums[j], nums[k]};
                     res.push_back(temp);
-
-                    while(j < k && nums[j] == nums[j+1])    j++;
-                    while(j < k && nums[k] == nums[k-1])    k--;
-
                     j++;
                     k--;
+                    while(j < k && nums[j] == nums[j-1])    j++;
+                    while(j < k && nums[k] == nums[k+1])    k--;
                 }
             }
         }
