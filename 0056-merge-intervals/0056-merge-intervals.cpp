@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& mat) {
-        // vector<vector<int>>ans;
         sort(mat.begin(), mat.end());
         int n = mat.size();
         for(int i=0; i<n-1; i++){
@@ -12,10 +11,6 @@ public:
                 n--;
                 i--;
             }
-        }
-
-        for(auto it:mat){
-            cout<<it[0]<<" "<<it[1]<<endl;
         }
         return mat;
     }
