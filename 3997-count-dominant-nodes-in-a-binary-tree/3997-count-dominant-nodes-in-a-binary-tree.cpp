@@ -32,24 +32,7 @@ int c=0;
     }
 
     int countDominantNodes(TreeNode* root) {
-
-        // int lMax=0, rMax=0;
-        // // if(root == NULL)    return 0;
-        // if(root->left == nullptr && root->right == nullptr){
-        //     c++;
-        //     return root->val;
-        // }
-        // lMax = countDominantNodes(root->left);
-        // rMax = countDominantNodes(root->right);
-        // if(root-> val >= lMax && root->val >= rMax){
-        //     c++;
-        //     return root->val;
-        // }
-        // else{
-        //     return max(lMax, rMax);
-        // }
         int max = fun(root);
         return c; 
-        
     }
 };
