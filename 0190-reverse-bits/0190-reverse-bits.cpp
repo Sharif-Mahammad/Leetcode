@@ -1,13 +1,14 @@
 class Solution {
 public:
     int reverseBits(int n) {
-        bitset<32>b(n);
-
-        string s = b.to_string();
-        reverse(s.begin(), s.end());
-
-        bitset<32>rev(s);
-        long ans=rev.to_ulong();
+        int ans=0;
+        for(int i=0; i<31; i++){
+            // extracting the bit value from n at that position and
+            // inserting the bit value to ans value
+            ans = ans | (n>>i & 1);
+            // moving the ans bits by one for each bit in n
+            ans = ans << 1;
+        }
         
         return ans;
     }
