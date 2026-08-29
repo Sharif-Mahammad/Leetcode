@@ -9,7 +9,6 @@ public:
             if(targetBit){
                 // when we need change bit 0 to 1
                 if((fstBit | scnBit) != targetBit)    ans += 1;
-                cout<<"1 ";
             }
             else if( !targetBit ){
                 // when we need change bit 1 to 0
